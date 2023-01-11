@@ -13,7 +13,6 @@ def get_post_per_month(data:dict)->dict:
     """
     month_data={}
     messages=data['messages']
-    #list1=[]
 
     for i in messages:
         str1=i['date'].split('T')[0]
@@ -21,7 +20,6 @@ def get_post_per_month(data:dict)->dict:
 
         month_data.setdefault(str1, 0)
         month_data[str1]+=1
-        #list1.append(str(str1)) 
 
 
 
