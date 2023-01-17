@@ -12,7 +12,6 @@ def get_post_per_week(data:dict,month:int)->dict:
     Returns: 
         dict: a dictionary with the number of posts for each week.
     """
-    list1=[]
     month_data={}
     messages=data['messages']
     for i in messages:
@@ -26,7 +25,6 @@ def get_post_per_week(data:dict,month:int)->dict:
         date=datetime.date(year, month, day)
         week_day=date.weekday()
 
-        list1.append(week_day)
         month_data.setdefault(week_day, 0)
         month_data[week_day]+=1
         
